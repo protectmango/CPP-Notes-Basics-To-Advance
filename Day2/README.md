@@ -162,3 +162,22 @@ int main()
 ```
 
 ## Scope Resolution : :
+
+To access **local** and **global** variable with same name in **main()**.
+
+```c++
+#include<iostream>
+using namespace std;
+int x=100;
+int main()
+{
+ int x=10;
+ cout << "local x :" << x << endl;
+ cout << "global x : " << ::x << endl;
+}
+```
+**Output**
+```sh
+local x : 10
+global x : 100
+```
