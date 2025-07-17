@@ -2,12 +2,17 @@
 
 It is used to provide a **duplicate name** to **existing variable.**
 
+[Rules for Reference Variable](#rules).   
+[Reference to Pointer](#reference-to-pointer).   
+[Reference to an array](#reference-to-an-array).   
+[To check optimised code](#to-check-the-optimized-code).
+
 **Syntax**  
 ```c++
 datatype &newname = existing name
 ```
 >[!Important]   
->**Rules**  
+>## **Rules**  
 >1. **reference value**  must be initilized.   
 >    - **Invalid**    
 >    ```c++
@@ -71,7 +76,7 @@ int &rv;
 ```sh
 c++ file.cpp -fdump-tree-gimple
 ```
-Check the output using **ls**
+Check the output using **ls.**
 
 >[!Note]
 >**Pointer** to **reference** is not possible.   
@@ -80,3 +85,4 @@ Check the output using **ls**
 >   int &*p;    /*invalid*/
 >   ```
 
+## Reference to an array
