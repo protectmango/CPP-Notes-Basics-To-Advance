@@ -167,8 +167,11 @@ int main()
 ```
 **main()**
 ```c++
+int main()
+{
     cout<< "Hello Brother" << endl;
     cout<< "Basic Syntax For C++"<<endl;
+}
 ```
 - **cout** object of `ofstream` class.
 - **<<**  insertion operator
