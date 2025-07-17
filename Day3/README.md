@@ -24,9 +24,8 @@ datatype &newname = existing name
 >       ```c++
 >       const int &rv = 0;
 >       ```   
->5. **Reference variable** can dereference automatically.
-> >[!NOTE]      
-> >It is working like **pointer** internally.
+>5. **Reference variable** can dereference automatically.     
+> It is working like **pointer** internally.
 >6. No **alias** for constant variable/data. 
 >       - **Invalid**   
 >       ```c++
@@ -41,5 +40,43 @@ datatype &newname = existing name
 >       ```c++
 >       int &&rv;        
 >       ```
-> >[!NOTE]   
-> >**Reference variable** doesn't have seperate memory;    
+>       **Reference variable** doesn't have seperate memory;    
+
+
+## Reference to Pointer
+Providing duplicate name to a pointer.   
+**Syntax** 
+```c++
+datatype &new_name = existing_name
+```
+
+### With respect to User
+```c++
+int x = 10;
+int &rv = x;
+cout<<rv;
+```
+
+### With respect to Compiler
+```c++
+int x = 10;
+int &rv;
+    
+    rv = &x;
+    cout << *rv;
+```
+
+## To Check the optimized Code
+**Command**
+```sh
+c++ file.cpp -fdump-tree-gimple
+```
+Check the output using **ls**
+
+>[!Note]
+>**Pointer** to **reference** is not possible.   
+>**Invalid**
+>  ```c++
+>   int &*p;    /*invalid*/
+>   ```
+
