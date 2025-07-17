@@ -109,3 +109,32 @@ a
 character: a
 ASCII: 97
 ```
+
+## How to print `float` value
+
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+    float f;
+    cout << "enter float" << endl;
+    cin >> f;
+    cout << "float : "<< f << endl; /*%g*/
+    cout << fixed << f << endl; /*%f after.6digits*/
+    cout << scientific  << f << endl; /*%e exponetial*/
+}
+```
+
+**Input**
+```sh
+enter float
+23.5
+```
+
+**Output**
+```sh
+float : 23.5
+23.500000
+2.350000e+01
+``` 
