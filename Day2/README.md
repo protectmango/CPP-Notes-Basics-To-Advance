@@ -61,3 +61,51 @@ Hexadecimal: 0XA
 ```c++
 cout << noshowbase << nouppercase << noshowpos; /*deactivated*/
 ```
+
+## Reading Hex, Oct, Dec in C++
+
+```c++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    /*Hexadecimal*/
+	int x;
+	cin>>hex>>x;
+
+    /*Octal*/
+    int y;
+    cin>>oct>>y;
+
+    /*Decimal*/
+    int x;
+    cin>>x;
+}
+```
+
+## Read ASCII of a character
+
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+ char ch;
+ cout << "enter char" << endl;
+ cin >> ch;
+ cout << "charcater: " << ch << endl;
+ cout << "ASCII: " << (int)ch << endl;
+}
+```
+
+**Input**
+```sh
+enter char
+a
+```
+**Ouput**
+```sh
+character: a
+ASCII: 97
+```
