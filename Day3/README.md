@@ -92,8 +92,8 @@ Provide **duplicate** name to an **array**.
 datatype (&new_name)[size] = existing_name;
 int (&p)[5];
 ```
->[!Warning].  
->Array of reference is not possible.
+> [!WARNING]  
+> Array of reference is not possible.
 >Example 
 >```c++
 >int &a[5];
