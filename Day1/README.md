@@ -29,5 +29,41 @@
 ## What is a Object ?
 
 >[!NOTE]   
->Understanding purpose only.   
->Object is a variable
+>*Understanding purpose only*   
+>**Object** is a **variable**
+
+Creating N no of variable to complete the task is called **Object Oriented Programming**.  
+
+>**C :**  Functional Oriented.  
+>`printf(), scanf(), fscanf(), fprintf()`  
+
+>**C++ :** Object Oriented.
+>`cin, cout, fin, fout` 
+
+## Object : Function + Data
+>**Function** : Procedure/Method/Code   
+>**Data** : attribute/fields
+
+```c
+struct Student{
+    int rollno;
+    char name[20];
+    float marks;
+    void scan()
+    {
+
+    }
+    void display()
+    {
+
+    }
+
+};
+
+int main()
+{
+    /*Object Declaration*/
+    struct Student S;
+
+}
+```
