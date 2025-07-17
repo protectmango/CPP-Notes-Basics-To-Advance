@@ -71,9 +71,13 @@ int main()
 
 ## Concept in Object Oriented Programming
 - **Inheritance**
-    - 
+    - Acquring properties from one to another.
+    - **Advantage**
+        - Code Re-usability
+        - Extensiblity
 - **Encapsulation**
     - Writing the data and function together.
+
     ```c++
     class Family{
         int gold;
@@ -83,10 +87,12 @@ int main()
     ```
 - **Abstraction**
     - Hide the data and restricting the access. Using **Access Specifer.**
+
     - **Access Specifier**
         - Private
         - Protected
         - Public
+
     ```c++
     class Student{
         private :
@@ -99,3 +105,23 @@ int main()
     };
     ```
 - **Polymorphism**
+    > **Poly** → **Many**   
+    > **Morphoism** → **Creation**
+
+    - Advantages   
+        - Flexibility   
+        - Single Entity exist more than one form
+
+    - Compile Time 
+        - Function Overloading
+        - Operator Overloading
+    
+    - Run Time 
+        - Virtual Function
+
+
+    **Function Binding** : Resolving a function call with its proper function defination.  
+    - Static/Early Binding     
+        If function binding happen at **compile time** called **compile time function binding**  also known as **static binding / early binding**
+    - Dynamic/Late Binding   
+        If function binding happen at **runtime** called **runtime binding*** also known as **dynamic/late binding**
