@@ -1,5 +1,6 @@
 # Day 1 : Intro to C++
 
+>[!Note]  
 >##  C++ → ` c + 1 `  
 >**C Concepts** + ` EXTRA `   
 
@@ -67,3 +68,34 @@ int main()
 
 }
 ```
+
+## Concept in Object Oriented Programming
+- **Inheritance**
+    - 
+- **Encapsulation**
+    - Writing the data and function together.
+    ```c++
+    class Family{
+        int gold;
+        int cash;
+        void Person1();
+    };
+    ```
+- **Abstraction**
+    - Hide the data and restricting the access. Using **Access Specifer.**
+    - **Access Specifier**
+        - Private
+        - Protected
+        - Public
+    ```c++
+    class Student{
+        private :
+                    /*Private Member*/
+        protected : 
+                    /*Protected Member*/
+        public : 
+                    /*Public Member*/
+
+    };
+    ```
+- **Polymorphism**
