@@ -128,7 +128,8 @@ int main()
 
 
 > [!IMPORTANT]  
->Statement which are `valid in c` but are `invalid in c++`
+>Statement which are `valid in c` but are `invalid in c++`.   
+>   **Case : 1**
 >    ```c++
 >   int x;
 >   char *p= &x;    /*invalid in c++*/
@@ -140,3 +141,45 @@ int main()
 >   int x;
 >   char *p = (char *)&x;
 >   ```
+>   **Case : 2**
+>   ```c++
+>   const int x=10;
+>   int *p;
+>   p = &x; /*invalide in c++*/
+>   *p = 30;
+>   ```
+>   
+>   **Valid Code**
+>   ```c++
+>   const int x = 10;    
+>   const int *p = &x;
+>   ```
+
+## Basic Code Syntax in C++
+
+**Headerfile**
+```c++
+    #include<iostream>
+```
+**namespace**
+```c++
+    using namespace std;
+```
+**main()**
+```c++
+    cout<< "Hello Brother" << endl;
+    cout<< "Basic Syntax For C++"<<endl;
+```
+- **cout** object of `ofstream` class.
+- **<<**  insertion operator
+- **endl** for new line
+
+## How to compile c++ code
+
+```sh
+g++ filename.cpp
+```
+**or**
+```sh
+c++ filename.cpp
+```
