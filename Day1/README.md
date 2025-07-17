@@ -1,11 +1,9 @@
-# Day 1
+# Day 1 : Intro to C++
 
-## Intro to C++
-
->` C++ → c + 1 `  
+## ` C++ → c + 1 `  
 >**C Concepts** + ` EXTRA `   
 
-|C Concepts|
+|**C Concepts**|
 |---|
 |Datatype|
 |Operator|
@@ -19,3 +17,8 @@
 |Command Line Argument|
 |Dynamic Memory Allocation|
 
+>**Extra** : Support Object Oriented Programming. 
+
+|Extra|
+|---|
+||
