@@ -171,11 +171,18 @@ int main()
 {
     cout<< "Hello Brother" << endl;
     cout<< "Basic Syntax For C++"<<endl;
+    int x;
+    cin>>x;
+    cout<< "x value : "<< x <<endl;
 }
 ```
-- **cout** object of `ofstream` class.
+- **cout** object of `ostream` class.
+- **cin** object of `istream` class.
 - **<<**  insertion operator
+- **>>**  extraction operator
 - **endl** for new line
+
+`cout` → `"x value : "` → `x` → `endl`;
 
 ## How to compile c++ code
 
