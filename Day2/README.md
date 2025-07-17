@@ -1,5 +1,12 @@
 # Operator in C++
 
+[Printing Hex, Oct, Dec, in C++](#printing-hex-octal-decimal-in-c).  
+[Reading Hex, Oct, Dec, in C++](#reading-hex-oct-dec-in-c).  
+[Read ASCII of a character in C++](#read-ascii-of-a-character).  
+[Print float values](#how-to-print-float-value)
+[Using printf() in C++](#using-printf-in-a-c-programm)
+[Scope Resolution](#scope-resolution--)
+
 ```c++
 #include<iostream>
 using namespace std;
