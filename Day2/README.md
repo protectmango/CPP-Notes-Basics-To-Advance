@@ -203,8 +203,8 @@ global x : 100
 >```
 
 
->[!WARNING]
->**: : It will always refer to global variable which is outside the main()
+>[!WARNING]   
+>**: :** It will always refer to global variable which is outside the main()
 >```c++
 >#include<iostream>
 >using namespace std;
