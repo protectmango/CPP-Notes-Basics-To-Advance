@@ -181,3 +181,42 @@ int main()
 local x : 10
 global x : 100
 ```
+
+>[!CAUTION]  
+>**Invalid Code**
+>```cpp
+>#include<iostream>
+>using namespace std;
+>int main()
+>{
+> int x=10;
+> cout << "local x :" << x << endl;
+>
+> /* invalid ,x not declared */
+> cout << "global x : " << ::x << endl; 
+>}
+>```
+>**Error**
+>```sh
+>error: no member named 'x' in the global namespace; did you mean simply 'x'?
+>    7 |  cout << "global x : " << ::x << endl; // invalid ,x not declared
+>```
+
+
+>[!WARNING]
+>**: : It will always refer to global variable which is outside the main()
+>```c++
+>#include<iostream>
+>using namespace std;
+>int x=100;
+>int main()
+>{
+> int x=10;
+> {
+>  int x=1000;
+>  cout << "local x :" << x << endl;
+>  cout << "global x : " << ::x << endl;
+> }
+>
+>}
+>```
