@@ -161,4 +161,4 @@ int main()
 }
 ```
 
-## Scope Resolution ::
+## Scope Resolution : :
