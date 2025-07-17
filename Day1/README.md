@@ -125,3 +125,18 @@ int main()
         If function binding happen at **compile time** called **compile time function binding**  also known as **static binding / early binding**
     - Dynamic/Late Binding   
         If function binding happen at **runtime** called **runtime binding*** also known as **dynamic/late binding**
+
+
+>[!Important].  
+>Statement which are `valid in c` but are `invalid in c++`
+>    ```c++
+>   int x;
+>   char *p= &x;    /*invalid in c++*/
+>   ```
+>  **C++** is has **strict type checking**.   
+>   
+>  **Valid Code**
+>   ```c++
+>   int x;
+>   char *p = (char *)&x;
+>   ```
