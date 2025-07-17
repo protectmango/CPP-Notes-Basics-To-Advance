@@ -4,7 +4,7 @@ It is used to provide a **duplicate name** to **existing variable.**
 
 [Rules for Reference Variable](#rules).   
 [Reference to Pointer](#reference-to-pointer).   
-[To check optimised code](#to-check-the-optimized-code).
+[To check optimised code](#to-check-the-optimized-code).  
 [Reference to an array](#reference-to-an-array).   
 
 **Syntax**  
