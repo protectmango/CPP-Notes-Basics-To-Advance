@@ -127,7 +127,7 @@ int main()
         If function binding happen at **runtime** called **runtime binding*** also known as **dynamic/late binding**
 
 
->[!Important].  
+> [!IMPORTANT]  
 >Statement which are `valid in c` but are `invalid in c++`
 >    ```c++
 >   int x;
