@@ -25,8 +25,8 @@ datatype &newname = existing name
 >       const int &rv = 0;
 >       ```   
 >5. **Reference variable** can dereference automatically.
-> > [!NOTE]      
-> > It is working like **pointer** internally.
+> >[!NOTE]      
+> >It is working like **pointer** internally.
 >6. No **alias** for constant variable/data. 
 >       - **Invalid**   
 >       ```c++
@@ -41,5 +41,5 @@ datatype &newname = existing name
 >       ```c++
 >       int &&rv;        
 >       ```
-> > [!NOTE]   
+> >[!NOTE]   
 > >**Reference variable** doesn't have seperate memory;    
