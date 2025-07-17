@@ -86,3 +86,15 @@ Check the output using **ls.**
 >   ```
 
 ## Reference to an array
+Provide **duplicate** name to an **array**.  
+**Syntax**
+```c++
+datatype (&new_name)[size] = existing_name;
+int (&p)[5];
+```
+>[!Warning].  
+>Array of reference is not possible.
+>Example 
+>```c++
+>int &a[5];
+>```
