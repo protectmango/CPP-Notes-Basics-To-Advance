@@ -1,5 +1,11 @@
 # Day 1 : Intro to C++
 
+[What is a Object ?](#what-is-a-object-).   
+[Concept in OOPS](#concept-in-object-oriented-programming).   
+[Basic Syntax](#basic-code-syntax-in-c).   
+[How to compile c++ code ?](#how-to-compile-c-code).  
+
+
 >[!Note]  
 >##  C++ → ` c + 1 `  
 >**C Concepts** + ` EXTRA `   
