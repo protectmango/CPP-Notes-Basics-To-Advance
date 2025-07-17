@@ -1,6 +1,6 @@
 # Day 1 : Intro to C++
 
-##  C++ → ` c + 1 `  
+>##  C++ → ` c + 1 `  
 >**C Concepts** + ` EXTRA `   
 
 **C Concepts**
@@ -51,11 +51,11 @@ struct Student{
     float marks;
     void scan()
     {
-
+        /*---Statement---*/
     }
     void display()
     {
-
+        /*---Statement---*/
     }
 
 };
