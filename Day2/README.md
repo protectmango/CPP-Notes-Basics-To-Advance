@@ -121,8 +121,8 @@ int main()
     cout << "enter float" << endl;
     cin >> f;
     cout << "float : "<< f << endl; /*%g*/
-    cout << fixed << f << endl; /*%f after.6digits*/
-    cout << scientific  << f << endl; /*%e exponetial*/
+    cout << "fixed : " << fixed << f << endl; /*%f after.6digits*/
+    cout << "scientific : " << scientific  << f << endl; /*%e exponetial*/
 }
 ```
 
@@ -135,6 +135,30 @@ enter float
 **Output**
 ```sh
 float : 23.5
-23.500000
-2.350000e+01
+fixed : 23.500000
+scienctific : 2.350000e+01
 ``` 
+
+>To deactivate these flag
+>   ```c++
+>   cout<<defaultfloat<<f<<endl;
+>   ```
+
+## Using `printf()` in a `c++` programm.
+
+>must include `<cstdio>` to use `printf()` and `scanf()`
+
+```c++
+#include<iostream>
+#include<cstdio>
+using namespace std;
+int main()
+{
+ int x;
+ printf("enter x\n");
+ scanf("%d",&x);
+ printf("%d %#o %#x \n",x,x,x);
+}
+```
+
+## Scope Resolution ::
