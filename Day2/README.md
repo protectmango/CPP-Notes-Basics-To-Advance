@@ -71,8 +71,8 @@ using namespace std;
 int main()
 {
     /*Hexadecimal*/
-	int x;
-	cin>>hex>>x;
+    int x;
+    cin>>hex>>x;
 
     /*Octal*/
     int y;
@@ -219,4 +219,9 @@ global x : 100
 > }
 >
 >}
+>```
+>**Output**
+>```sh
+>local x : 1000
+>global x : 100
 >```
