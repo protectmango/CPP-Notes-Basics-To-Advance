@@ -2,8 +2,8 @@
 
 >[!Note]
 > Operator for allocating memory.   
-> `new` operator → allocating memory.  
-> `delete` operator → deleting/free memory.
+- `new` operator → allocating memory.  
+- `delete` operator → deleting/free memory.
 
 >How memory is allocated by compiler?
 
@@ -22,9 +22,25 @@
     - **Run Time** : Memory reserved, Memory accessed.
 
 >[!Important]  
-> Problem with Statically.
-- **Dynamically**
+> Problem with Statically allocated memory.  
+    - memory either `wasted/insufficient`.  
+To Avoid this problem we alloct memory **Dynamically**.
+- **Dynamically**  
+    Using either `malloc()` or `calloc()`.
 
+    ```c++
+    int n;
+
+    scan("%d", &n);
+
+    int *p = malloc(sizeof( int ) * n );
+    ```
+    - **Compile Time** : memory decided for n → `4` byte.
+    - **Load Time** : Program loaded to `RAM` for execution.
+    - **Run Time**   
+        - Memory Decided.
+        - Memory Reserved.
+        - Memory Accessed.
 
 **Using malloc() in C++**  
 Allocating memory using malloc(), calloc(), and free the memory using free().
