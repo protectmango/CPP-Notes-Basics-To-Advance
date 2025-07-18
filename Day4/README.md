@@ -2,7 +2,7 @@
 
 Passing argument to a **function**.    
 - [Call By Value](#call-by-value)
-- Call By Address
+- [Call By Address](#call-by-address)
 - Call By Reference
 
 ## Call By Value
@@ -10,7 +10,8 @@ Passing argument to a **function**.
 ```c++
 #include<iostream>
 using namespace std;
-
+```
+```c++
 void swap_data( int a , int b )
 {
     int t;
@@ -22,7 +23,8 @@ void swap_data( int a , int b )
     cout << "a : " << a << endl;
     cout << "b : " << b << endl;
 }
-
+```
+```c++
 int main()
 {
 
@@ -55,11 +57,13 @@ Variable passed at the time of calling will be affected.
 - Used `*` **Pointer** to receive the variable.   
 
 >[!Note]  
-> **8 byte** of memory is allocated to each pointer variable. 
+> **8 byte** of memory is allocated to each pointer variable.   
+
 ```c++
 #include <iostream>
 using namespace std;
-
+```
+```c++
 void swap_data( int *a , int *b )
 {
     int t;
@@ -71,7 +75,8 @@ void swap_data( int *a , int *b )
     cout << "a : " << *a << endl;
     cout << "b : " << *b << endl;
 }
-
+```
+```c++
 int main()
 {
 
@@ -96,3 +101,11 @@ Inside Main()
 a : 20
 b : 10
 ```
+
+## Call By Reference 
+Work on the **same variable memory** which is passed as attribute.    
+>[!Warning]   
+> We should not pass **constants** at function call.
+> ```c++
+>  fun(10);
+> ```
