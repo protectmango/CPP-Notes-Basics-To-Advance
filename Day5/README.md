@@ -1,7 +1,17 @@
 # Dynamic Memory Allocation in C++
 
->[!Note]
+[Basic Introduction](#introduction)  
+[Operator for DMA](#operator-for-dma)   
+[Using `malloc()` in C++](#using-malloc-in-c)   
+[Dynamic Memory alloction using `new` operator](#dynamic-memory-allocation-using-new-operator)   
+[Initilization of Dynamically Allocated Memory](#initialization-of-dynamically-allocated-memory)   
+[Dynamica Memory allocation for `array`](#dynamic-memory-allocation-for-array-in-c)   
+[Dynamic Memory allocation for `2D array`](#dynamic-memory-allocation-for-2d-array-in-c)
+
+## Introduction
+>[!Note]   
 > Operator for allocating memory.   
+### Operator for DMA 
 - `new` operator → allocating memory.  
 - `delete` operator → deleting/free memory.
 
@@ -42,7 +52,7 @@ To Avoid this problem we alloct memory **Dynamically**.
         - Memory Reserved.
         - Memory Accessed.
 
-**Using malloc() in C++**  
+## Using malloc() in C++  
 Allocating memory using malloc(), calloc(), and free the memory using free().
 
 ```c++
@@ -83,11 +93,12 @@ p = new int;
 - `typecasting` **not required**.
 - `new` is **operator**.
 - `return` exact pointer.
-> In `C` **void *  pointer** is returned from `malloc()` and `calloc()`.   
+> In `C` **void *  pointer** is returned from `malloc()` and `calloc()`.
+
 >[!Note]  
 > In `C++` `new` return **int * pointer**. 
 
-## Initialization of Dynamically Allocated  Memory
+## Initialization of Dynamically Allocated Memory
 
 ```c++
 int *p;
