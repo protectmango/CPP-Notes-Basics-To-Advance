@@ -6,7 +6,7 @@ It is used to provide a **duplicate name** to **existing variable.**
 [Reference to Pointer](#reference-to-pointer).   
 [To check optimised code](#to-check-the-optimized-code).  
 [Reference to an array](#reference-to-an-array).   
-[Function Return typpe is reference](#function-return-type-is-reference)
+[Function Return type is reference](#function-return-type-is-reference)
 
 **Syntax**  
 ```c++
@@ -140,3 +140,38 @@ func();
 ```sh
 k value : 10
 ```
+>[!Warning]  
+> **Invalid**
+> ```c++
+> #include <iostream>
+> using namespace std;
+> ```
+> ```c++
+> int& func(){
+> ```
+> The memory of the k will be destroyed after execution of function.   
+> In main function
+> ```c++
+> func()=a; /*Will generate error*/
+> ```
+> >int k=100;
+> ```c++
+> cout  <<"k value : " <<  k << endl;
+> return k;
+>}
+>```
+>```c++
+> int main() 
+> {  
+>  int a=10;
+>  func()=a;
+>  func();
+>}
+>```
+> **Error**
+>```sh
+>error: expression is not assignable
+>   12 |            func()=a;
+>      |            ~~~~~~^
+>1 error generated.
+>```
