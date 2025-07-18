@@ -82,7 +82,7 @@ int main()
 
     int a = 10 , b = 20;
 
-    /*Call By Reference*/
+    /*Call By Address*/
     swap_data( &a, &b);
 
     cout << "Inside Main()" <<endl;
@@ -109,3 +109,47 @@ Work on the **same variable memory** which is passed as attribute.
 > ```c++
 >  fun(10);
 > ```
+**Advantage**  
+- No extra **8 byte** memory is needed.
+```c++
+#include <iostream>
+using namespace std;
+```
+```c++
+void swap_data( int &a , int &b )
+{
+    int t;
+    t = a;
+    a = b;
+    b = t;
+
+    cout << "Inside Swap() " <<endl;
+    cout << "a : " << a << endl;
+    cout << "b : " << b << endl;
+}
+```
+```c++
+int main()
+{
+
+    int a = 10 , b = 20;
+
+    /*Call By Reference*/
+    swap_data( a, b);
+
+    cout << "Inside Main()" <<endl;
+    cout << "a : " << a << endl;
+    cout << "b : " << b << endl;
+   
+}
+
+```
+**Output**
+```sh
+Inside Swap()
+a : 20
+b : 10 
+Inside Main()
+a : 20
+b : 10
+```
