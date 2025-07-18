@@ -4,7 +4,7 @@ Passing argument to a **function**.
 - [Call By Value](#call-by-value)
 - [Call By Address](#call-by-address)
 - [Call By Reference](#call-by-reference)
-
+- [Reference vs Pointer](#reference-vs-pointer)
 ## Call By Value
 **Variable passed** to the function at the time of calling is **not affected** by the changes/operation done within the function
 ```c++
@@ -153,3 +153,13 @@ Inside Main()
 a : 20
 b : 10
 ```
+## Reference vs Pointer 
+
+|Reference|Pointer|
+|---|---|
+|- Reference variable must be initilized.|- Pointer may or may not be initialized.|
+|- Null Reference not possible.|- Null pointer possible.|
+|- Reference variable cannot point to another variable.|- Pointer can point to any variable at any time.|
+|- Will not get seperate memory.|- Seperate memory of 8 byte is assign to the variable.|
+|- Reference variable get dereference implicitly.|- Pointer should be dereference explicitly.|
+|- Reference to Reference not possible.|- Pointer to Pointer is possible.|
