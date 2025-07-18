@@ -6,6 +6,7 @@ It is used to provide a **duplicate name** to **existing variable.**
 [Reference to Pointer](#reference-to-pointer).   
 [To check optimised code](#to-check-the-optimized-code).  
 [Reference to an array](#reference-to-an-array).   
+[Function Return typpe is reference](#function-return-type-is-reference)
 
 **Syntax**  
 ```c++
@@ -98,3 +99,44 @@ int (&p)[5];
 >```c++
 >int &a[5];
 >```
+
+
+## Function return type is **reference**
+
+```c++
+#include<iostream>
+using namespace std;
+```
+**Syntax**
+```c++
+int& func(){
+ static int k=100;
+ cout  <<"k value : " <<  k << endl;
+ return k;
+}
+```
+```c++
+int main() 
+{  
+  int a=10;
+  func()=a;
+  func();
+
+}
+```
+Store value of `a` into `k` **memory location.**
+```c++
+func()=a;
+```
+**Ouput**
+```sh
+k value : 100
+```
+When we call the function again.
+```c++
+func();
+```
+**Output**
+```sh
+k value : 10
+```
