@@ -88,8 +88,8 @@ When **variable is created** then **memory is allocated**.
 
 
 >[!Note]   
->Size of structure variable depends on the datamember only.   
->Function are not included.   
+>**Size** of `structure variable` depends on the **data member** only.   
+>**Function** are not included.   
 >If no data memeber are there   
 >    - Then **default size** will be `1` , for the variable existance. 
 >    - To access member functions.
