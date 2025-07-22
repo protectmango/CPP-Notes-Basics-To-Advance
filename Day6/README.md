@@ -29,7 +29,7 @@ int main()
 ```
 
 **inline.s** file
-```arm
+```c++
 	.file	"inline.cpp"
 	.text
 	.section	.text._ZNKSt5ctypeIcE8do_widenEc,"axG",@progbits,_ZNKSt5ctypeIcE8do_widenEc,comdat
