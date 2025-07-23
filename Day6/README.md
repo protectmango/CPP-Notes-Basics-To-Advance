@@ -130,6 +130,9 @@ private:
 int main() 
 {  
   Family f;
+```
+To access member function `.` operator is needed.
+```c++
   f.set_data();
   f.get_data();
 ```
@@ -141,3 +144,57 @@ int main()
     cout << f.cash << " "<< f.gold << endl;
 }
 ```
+### Size of a structure variable.
+
+```c++
+#include<stdio.h>
+struct st
+{
+ int x;
+ char ch;
+
+};
+int main()
+{
+ struct st s;
+```
+**Using sizeof()** from C
+```c++
+ printf("%ld\n",sizeof (struct st));
+```
+**sizeof object** in C++
+```c++
+ printf("%ld\n",sizeof s);
+ 
+}
+```
+**Output**
+```sh
+8
+8
+```
+
+## Size of a structure without Data member.
+
+```c++
+#include<stdio.h>
+struct st
+{
+public:
+ void print()
+ {
+	 printf("Hello");
+ }
+};
+int main()
+{
+ struct st s;
+ printf("%d\n",sizeof s);
+}
+```
+**Output**
+```sh
+1
+```
+>[!Note]  
+>The size of a structure variable will be `1`, to prove the existance of a variable and to access the member functions of that structure.
