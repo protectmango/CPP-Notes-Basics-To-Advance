@@ -66,6 +66,10 @@ Structure is a **user defined datatype** to store different type of **data membe
 struct Student {
     int id;
     char name[20];
+    void fun()
+    {
+        /*Statements*/
+    }
 }; 
 ```
 
@@ -96,3 +100,44 @@ When **variable is created** then **memory is allocated**.
 
 By Default **access specifier** in structure is **public**.   
     - we can hide the data using keyword `private`.
+
+
+```c++
+#include<iostream>
+using namespace std;
+struct Family
+{
+```
+**Data members / Attributes**
+```c++
+private:
+ int cash,gold;
+```
+**Member functions / Methods**
+```c++
+ public:
+ void set_data(){
+  cout << "enter cash and gold" << endl;
+  cin >> cash >>gold;
+ }
+ void get_data(){
+  cout << cash << " " << gold << endl;
+ }
+};
+```
+**Non Member Function**
+```c++
+int main() 
+{  
+  Family f;
+  f.set_data();
+  f.get_data();
+```
+>[!Warning]  
+>**private** data can't access directly
+```c++
+    f.cash=10; 
+    f.gold=20;
+    cout << f.cash << " "<< f.gold << endl;
+}
+```
