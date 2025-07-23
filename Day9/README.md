@@ -325,3 +325,12 @@ int sum(int x,int y)
 30
 190
 ```
+## Rule for default argument
+- A function can have multiple default parameter.
+- All default parameter must be the right most parameter.
+- Default parameter must be given only in the function prototype and most not be repeated in the funciton defination.
+
+## Advantage of default argument
+- They provide greater flexibility to the programmer.
+- Default argument can be used to add new parameter to the existing function.
+- They can also be used to combine similar function into one.
