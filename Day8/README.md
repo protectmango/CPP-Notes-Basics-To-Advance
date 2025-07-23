@@ -1,8 +1,8 @@
 # Data Types
 **New Data type** in C++, which are not in C.
-- **wchar_t**
-- **bool**
-- **string**
+- [**wchar_t**](#wchar_t)
+- [**bool**](#bool)
+- [**string**](#string)
 
 ## wchar_t
 - **wchar_t** is used to print wide range of character.
@@ -189,5 +189,113 @@ int main()
 }}
 ```
 ## String 
->[!Note]  
-> It is a **class**
+**It is a class.**
+- collection of char / set of char.
+- ending with `\0`.
+- size of string depend on compiler.
+- according to compiler string is a **class**.
+
+- ### Size of string
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+	string s;
+	cout<<sizeof(s)<<endl;
+}
+```
+**Output** on Ubuntu OS
+```sh
+32
+```
+**Output** on Mac OS
+```sh
+24
+```
+
+### Case 1
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+    string s="hello vector";
+    cout<<sizeof(s)<<endl;
+    cout<<s<<endl;
+}
+```
+**Output** on Ubuntu OS
+```sh
+32
+hello vector
+```
+**Output** on Mac OS
+```sh
+24
+hello vector
+```
+
+### How to find the size and length of the string ?
+
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+    string s="hello vector";
+    cout<<s.size()<<endl;
+    cout<<s.length()<<endl;
+    cout<<s<<endl;
+}
+```
+**Output**
+```sh
+12
+12
+hello vector
+```
+
+### Concate two strings
+
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+	string s="hello",s1="vector";
+	cout<<s1+s<<endl;
+}
+```
+**Output**
+```sh
+hellovector
+```
+### Copy two strings
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+	string s="hello",s1;
+    s1 = s;
+	cout<<s1<<endl;
+}
+```
+**Output**
+```sh
+hello
+```
+
+### Comparing two strings
+```c++
+#include<iostream>
+using namespace std;
+int main()
+{
+	string s1="hello",s2= "HELLO";
+    bool res;
+    res = s1==s2;
+	cout<< res <<endl;
+}
+```
