@@ -114,6 +114,8 @@ private:
  int cash,gold;
 ```
 **Member functions / Methods**
+>[!Note]
+> To access **private member** atleast one **member function** must be present in the **public section**. 
 ```c++
  public:
  void set_data(){
