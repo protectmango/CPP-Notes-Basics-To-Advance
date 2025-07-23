@@ -299,3 +299,7 @@ int main()
 	cout<< res <<endl;
 }
 ```
+**Output**
+```sh
+0
+```
