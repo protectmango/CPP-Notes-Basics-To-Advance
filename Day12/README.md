@@ -375,3 +375,7 @@ Copy constructor
 100 200
 100 200
 ```
+
+### Why do we used Member initilization not Assignment Operator?
+
+If all the data member of the class are `constant` then member initilization is not possible using **assignment operator**.
