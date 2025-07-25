@@ -3,7 +3,7 @@
 It is used to provide a **duplicate name** to **existing variable.**
 
 [Rules for Reference Variable](#rules).   
-[Reference to Pointer](#reference-to-pointer).   
+[Reference to Pointer](#reference-to-a-pointer).   
 [To check optimised code](#to-check-the-optimized-code).  
 [Reference to an array](#reference-to-an-array).   
 [Function Return type is reference](#function-return-type-is-reference)
@@ -49,8 +49,7 @@ datatype &newname = existing name
 >       **Reference variable** doesn't have seperate memory;    
 
 
-## Reference to Pointer
-Providing duplicate name to a pointer.   
+## Internal working of reference.
 **Syntax** 
 ```c++
 datatype &new_name = existing_name
@@ -78,6 +77,38 @@ int &rv;
 c++ file.cpp -fdump-tree-gimple
 ```
 Check the output using **ls.**
+
+## Reference to a Pointer
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int num = 10;
+    int* ptr = &num;  // Pointer to 'num'
+    int* &refToPtr = ptr;  // Reference to the pointer 'ptr'
+
+    cout << "Original num: " << num << endl;  // 10
+    cout << "Pointer value: " << *ptr << endl;  // 10
+    cout << "Reference to pointer value: " << *refToPtr << endl;  // 10
+
+    // Modify the value through the reference
+    *refToPtr = 20;
+    cout << "After modification:" << endl;
+    cout << "num: " << num << endl;  // 20
+    cout << "*ptr: " << *ptr << endl;  // 20
+}
+```
+**Output**
+```sh
+Original num: 10
+Pointer value: 10
+Reference to pointer value: 10
+After modification:
+num: 20
+*ptr: 20
+```
 
 >[!Note]
 >**Pointer** to **reference** is not possible.   
