@@ -5,7 +5,7 @@ C++ Notes and Practise question for interview practise
 - [Operator and Scope Resolution](/Day2/README.md#operator-in-c)   
     -[Scope Resolution](/Day2/README.md#scope-resolution--)
 - [Referance Variable](/Day3/README.md#referance-variable-in-c)   
-    - [Reference to Pointer](Day3/README.md#reference-to-pointer)
+    - [Reference to Pointer](Day3/README.md#reference-to-a-pointer)
     - [Reference to Array](Day3/README.md#reference-to-an-array)
     - [Function return type is Reference](/Day3/README.md#function-return-type-is-reference)
 - [Call By Value|Address|Reference](/Day4/README.md#call-by--value--address--reference-)   
