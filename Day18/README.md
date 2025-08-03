@@ -275,3 +275,58 @@ int main(int argc,char **argv)
     ifstream out ("data");
     x = out.tellg();
     ```
+
+
+## Complete Object Read and Write Operation from a binary file
+
+### Read Object
+
+```c++
+#include<iostream>
+#include<fstream>
+using namespace std;
+struct st
+{
+  int x;
+  char ch;
+  float f;
+};
+int main() 
+{ 
+  struct st s1={100,'S',34.5},s2; 
+  fstream fio("data",ios::in|ios::out|ios::trunc); //w+
+  fio.write((char*)&s1,sizeof(s1));
+  fio.seekg(0,ios::beg);
+  fio.read((char*)&s2,sizeof(s2));
+   cout << s2.x << " " << s2.ch << " " << s2.f << endl;
+ 
+  fio.close();
+
+}
+```
+
+### Write Object
+
+```c++
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main() 
+{  
+  fstream fio("data",ios::in|ios::out|ios::trunc); //w+
+  int x=10,y;
+  char ch1='A',ch2;
+  float f1=23.45,f2;
+  fio.write((char*)&x,sizeof(x));
+  fio.write(&ch1,sizeof(ch1));
+  fio.write((char*)&f1,sizeof(f1));
+  fio.seekg(0,ios::beg);
+  fio.read((char*)&y,sizeof(y));
+  fio.read(&ch2,sizeof(ch2));
+  fio.read((char*)&f2,sizeof(f2));
+   cout << y << " " << ch2 << " " << f2 << endl;
+ 
+  fio.close();
+
+}
+```
