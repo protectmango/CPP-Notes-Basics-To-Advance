@@ -533,14 +533,18 @@ int main()
 
 ### Why `<<` and `>>` operator can't be overloaded with member function?
 
-- Suppose, if the instruction is 
+- Suppose, if the instruction is    
+
     ```c++
     cout << obj;
     ```
-    and whenever it is overloaded as member function, then it is interepreted as 
+
+    and whenever it is overloaded as member function, then it is interepreted as    
+
     ```c++
     cout.opeartor << (obj);
     ```
+    
     It would require that your overloaded function be part of the ostream class, not part of your class. Since you are not allowed to modify the ostream class.
 
 ### Why cout and cin are being passed as reference objects while overloading insertion and extraction operators?
