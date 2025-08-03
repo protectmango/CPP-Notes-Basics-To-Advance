@@ -373,7 +373,7 @@ int main()
 |Subscript|[]|
 |Arrow|->|
 
-#### Assignment Operator `=`
+## Assignment Operator `=`
 
 ```c++
 #include<iostream>
@@ -413,3 +413,140 @@ int main()
 
 - When we don't define the member function for `=` operator, then compiler will supply the default assignment overloaded function, and if we define the friend function then it becomes ambiquity for compiler.
 
+## Function Call operator `()`
+
+```c++
+#include <iostream>
+using namespace std;
+
+class A
+{
+    int x,y;
+    public :
+    void operator() (int a, int b)
+    {
+        x=a;
+        y=b;
+    }
+    void get_data()
+    {
+        cout<<"x : "<< x<< "y = "<<y<< endl;
+    }
+};
+
+int main()
+{
+    A obj;
+    obj(10,20);
+    obj.get_data();
+}
+```
+
+#### Why `[]`, `()`, `->` operator can't be overloaded by friend function ?
+
+Overlaoding these operators are having limitation to the language design to maintain the data security.
+
+## Subscript Operator `[]`
+
+```c++
+#include<iostream>
+using namespace std;
+
+class A
+{
+    int a[5];
+    public : 
+    A()
+    {
+        for(int i=0; i< 5; i++)
+        {
+            a[i] = i+10;
+        }
+    }
+
+    int operator[] (int index)
+    {
+        return a[index];
+    }
+};
+
+int main()
+{
+    A obj;
+    for (int i=0; i<5; i++)
+    {
+        cout << obj[i] << " "; /*obj.operator[] (i)*/
+    }
+
+    cout << endl;
+}
+```
+
+## Operator that can be overloaded only by friend function.
+
+- There are two operator that can be overloaded only through friend function and can not by using member function.
+
+    - `<<` insertion
+    - `>>` extraction
+
+## Insertion Operator `<<`
+
+```c++
+#include<iostream>
+using namespace std;
+
+class A 
+{
+    int x, y;
+    public :
+    A () : x(0),y(0) {}
+
+    A (int a, int b): x(a), y(b) {}
+
+    friend ostream & operator << (ostream &out, A &obj);
+};
+ostream & operator << (ostream &out, A &obj)
+{
+    out<< "Operator << Function "<< endl;
+    out<<"x = "<< obj.x<< " ";
+    out<<"y = "<< obj.y<< " ";
+    cout<< endl;
+    return out;
+}
+
+int main()
+{
+
+    A obj1(10, 20), obj2(11, 22), obj3(12,24);
+
+    cout<< obj1<< obj2 << obj3;
+
+    /*
+    operator << (cout , obj1) << obj2 << obj3;
+    cout << obj2 << obj3;
+    operator << (cout , obj2) << obj3;
+    cout << obj3;
+    operator << (cout, obj3);
+    */
+}
+```
+
+### Why `<<` and `>>` operator can't be overloaded with member function?
+
+- Suppose, if the instruction is 
+    ```c++
+    cout << obj;
+    ```
+    and whenever it is overloaded as member function, then it is interepreted as 
+    ```c++
+    cout.opeartor << (obj);
+    ```
+    It would require that your overloaded function be part of the ostream class, not part of your class. Since you are not allowed to modify the ostream class.
+
+### Why cout and cin are being passed as reference objects while overloading insertion and extraction operators?
+
+- As the copy constructor and overloaded assigmnent opeartor in the classes `ostream` and `istream` are  declared in the protected section, their objects cout and cin are passed as reference.
+
+### What happens if cout and cin are passed as non-reference arguments ?
+
+- If `cout` and `cin` are passed as non-reference objects, then a new object is being created on the stack or data sections and tries calling the copy constructor of `istream` or `ostream` which are in protected section, the copy constructor can not be called outside the class scope.
