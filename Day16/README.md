@@ -544,7 +544,7 @@ int main()
     ```c++
     cout.opeartor << (obj);
     ```
-    
+
     It would require that your overloaded function be part of the ostream class, not part of your class. Since you are not allowed to modify the ostream class.
 
 ### Why cout and cin are being passed as reference objects while overloading insertion and extraction operators?
@@ -554,3 +554,103 @@ int main()
 ### What happens if cout and cin are passed as non-reference arguments ?
 
 - If `cout` and `cin` are passed as non-reference objects, then a new object is being created on the stack or data sections and tries calling the copy constructor of `istream` or `ostream` which are in protected section, the copy constructor can not be called outside the class scope.
+
+## Extaction Operator `>>`
+
+```c++
+#include<iostream>
+using namespace std;
+
+class A 
+{
+    int x, y;
+    public :
+    A (): x(0), y(0) {}
+
+    void get_data();
+
+    friend istream & operator >> (istream &, A &);
+};
+
+istream operator >> (istream &in, A &obj)
+{
+    cout <<"Extraction >> operator"<<endl;
+    in >> obj.x;
+    in >> obj.y;
+    return in;
+}
+
+int main()
+{
+    A obj1, obj2, obj3, obj4;
+    cin >> obj1>> obj2>> obj3>> obj4;
+
+    cout<< endl;
+
+    obj1.get_data();
+    obj2.get_data();
+    obj3.get_data();
+    obj4.get_data();
+}
+```
+
+# Smart Pointer `->`
+
+```c++
+#include<iostream>
+using namespace std;
+class Person
+{
+ string name;
+ int age;
+ public:
+ 	Person(){
+ 	cout << "enter name and age" << endl;
+ 	cin >> name >> age;
+ 	}
+ 	void getPerson(){
+ 	cout << name << " " << age << endl;
+ 	}
+ 	~Person(){}
+ };
+class Smartptr
+{
+  Person* ptr;
+  public:
+  Smartptr(){
+   ptr=new Person;
+  }
+  Person* operator->(){
+  cout << "-> overloaded" << endl;
+   return ptr;
+  }
+  Person operator *(){
+   cout << "* overloaded"<< endl;
+   return *ptr;
+  }
+  ~Smartptr(){
+    delete ptr;
+  }
+};
+
+int main() 
+{  
+   Smartptr s1,s2;
+   s1->getPerson(); // (s1.operator->())->getPerson();   
+   (*s2).getPerson(); // (s2.operator*()).getPerson();
+}
+```
+
+**Output**
+```c++
+enter name and age
+Aman
+30
+enter name and age
+Bala
+25
+-> overloaded
+Aman 30
+* overloaded
+Bala 25
+```
