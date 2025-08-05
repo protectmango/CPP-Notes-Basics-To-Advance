@@ -702,6 +702,32 @@ int main(){
 
 # Virtual Class and Virtual Function
 
+>[!Note]  
+>**virtual** keyword is only given to **Base class** function.
+
+- Virtual function are **binding* during the **runtime**.
+- While non-virtual function are binded during compile time.
+- All virtual functions are maintain in seperate lookup table its called **Virtual Table** or **V-Table**.
+
+```
+The virtual base classes are used to avoid duplication of data.
+```
+- When the class parent is made a **virtual** base class, It is taken care by the compiler to see that only, one copy of the base class parent is inherited.
+
+## Virtual Function
+
+- Virtual Function are the C++ languages feature to acheive the run-time polymorphism.
+- Base class pointer can point to derived class object. 
+
+- In this case, using base class pointer if we call some function which is in both classes, then base class function is invoked. But if we want to invoke derived class function using base class pointer it can be achived by defining the function or virtual in base class, this is how virtual function support **runtime polymorphism**.
+
+- Virtual function is a member function that is declared within a base class and re-defined by a derived class to suit its own needs.
+
+- When a function is made **virtual**, the decision as to which function to be invoked is done at the **runtime** based on the type of the object pointed to by the **pointer**, rather than the type of the pointer.
+
+>[!Note] 
+>**Virtual** keyword is only given to base class function.
+
 ## Function Overriding
 ```c++
 //function overriding
@@ -832,6 +858,24 @@ int main()
 ```
 
 ## Vector Table
+
+>[!Note]  
+> Array of function pointer.
+
+- Every class have a one virtual pointer (* vptr)
+- To implement virtual function, C++ uses a special form of lated binding know as the virtual table created in compile time.
+- The virtual table is a lookup table & address of only the virtual function in corresponding class to resolve the function with the proper function calls.
+
+>[!Important]  
+> ### Rules for Virtual Function
+> 1. The virtual function must be non-static members.
+> 2. The virtual function are accessed by using pointers to objects.
+> 3. A virtual function can be friedn of another class.
+> 4. Constructor  can not be made virtual, but destructor can be virtual.
+> 5. Virtual function defined in the base class need not be necessarily redefined in the derived class. In such scenario, call will invoke the base function.
+> 6. A base class pointer can refer to the derived class objects, but the reverse is not true.
+> 7. Virtual function should be declare in public section of the class.
+>
 
 ```c++
 #include<iostream>
