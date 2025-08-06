@@ -33,7 +33,7 @@ count << sizeof (ch) << endl;
 ```sh
 4
 ```
->[!Note]  
+> [!Note]  
 >**Default** value of **wchar_t** variable is `0`.
 - ### To scan and print 
     ```c++
