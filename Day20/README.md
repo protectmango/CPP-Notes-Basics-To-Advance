@@ -27,6 +27,9 @@
     - Queue
 
 ## Vector
+
+- A `vector` is a dynamic array that can grow or shrink in size as needed. It stores elements in contiguous memory, allowing for fast random access.
+
 - It is a templated class.
 - It is having only one end.
 - Insertion/Deletion of data if faster at slower at first/middle.
@@ -34,6 +37,41 @@
 - Randomly can access data.
 - It is dynamic array
     - Automatic memory created while storing the dynamic memory de-allocated automatically while deleting the data.
+
+- Header: ```#include <vector>```
+
+- Key Operations:
+
+  - `push_back()`: Adds an element to the end of the vector.
+
+  - `pop_back()`: Removes the last element from the vector.
+
+  - `size()`: Returns the number of elements in the vector.
+
+  - `at()`: Accesses an element at a specific index with bounds checking.
+
+  - `[]` (Subscript Operator): Accesses an element at a specific index without bounds checking (faster).
+
+
+- The provided program demonstrates various vector operations:
+
+  - Initialization: A vector named v is created.
+
+  - push_back(): A for loop adds five integer elements to the vector.
+
+  - size(): The program prints the current number of elements.
+
+  - Iteration: The program uses a for loop with the v.at(i) function to print each element.
+
+  - pop_back(): The pop_back() function is called, which removes the last element (50) from the vector.
+
+  - front() and back(): These member functions access the first and last elements of the vector respectively.
+
+  - insert(): The v.insert(v.begin()+2, 25) statement inserts the value 25 at the third position in the vector.
+
+  - erase(): The v.erase(v.begin()+4) statement removes the element at the fifth position.
+
+
 
 ### Case 1 
 
@@ -185,6 +223,41 @@ int main()
 ```
 
 ## List
+
+- A list is a doubly linked list that allows for constant-time insertion and deletion of elements at any position. However, it does not support fast random access.
+
+- Header: ```#include <list>```
+
+- Key Operations:
+
+  - push_front(): Adds an element to the beginning of the list.
+
+  - push_back(): Adds an element to the end.
+
+  - pop_front(): Removes the first element.
+
+  - pop_back(): Removes the last element.
+
+  - sort(): Sorts the elements in the list.
+
+  - reverse(): Reverses the order of elements.
+
+- Program Analysis
+  - The program for list showcases its key features:
+
+- Initialization: An empty list called l1 is created.
+
+  - push_back() and push_front(): Elements are added to both the front and back of the list.
+
+  - begin() and end(): An iterator it is used to traverse the list from the beginning to the end. The program uses *it to print the value at each position.
+
+  - pop_back() and pop_front(): The first and last elements are removed.
+
+  - sort(): The l1.sort() function sorts the remaining elements in ascending order.
+
+  - reverse(): The l1.reverse() function reverses the sorted list.
+
+  - remove(): The l1.remove(30) function removes all occurrences of the value 30 from the list.
 
 ```c++
 #include<iostream>
@@ -363,6 +436,7 @@ int main()
 
 ## Map
 - It is collection of key & value relation pair (duplicate key not allowed)
+- A map is an associative container that stores elements in a sorted key-value pair. Each key must be unique, and it provides very fast access to its elements.
 
 ```c++
 #include<iostream>
